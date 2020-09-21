@@ -33,8 +33,15 @@ The `pathin` parameter should point to the program location. The default value o
 ### Options
 <dl>
   <dt><strong>pathin</strong></dt>
-  <dd>The program directory. The default value is `&_progdir` which is undefined outside the Nutrica LSAF environment. This can be derived as `%let _progpath=&_SASWS_.&_SASFILEPATH_;`<\dd>
-    <dt>
+  <dd>The program directory. The default value is `&_progdir` which is undefined outside the Nutrica LSAF environment. This can be derived as `%let _progpath=&_SASWS_.&_SASFILEPATH_;` </dd>
+  <dt><strong>data</strong></dt>
+  <dd>A SAS dataset with a single variable `jobname` containing the names of the SAS job files to be run. Any job file prefixed by an asterisk will be ignored</dd>
+  <dt><strong>loc</strong></dt>
+    <dd>
+      * Use `loc=workspace` to run the jobs in the workspace
+      * Use `loc=repository` to run the jobs in the repository
+    </dd>
+</dl>
     
 ``` SAS
 /*******************************************************************************
